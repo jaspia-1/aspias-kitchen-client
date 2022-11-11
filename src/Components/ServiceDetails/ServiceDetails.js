@@ -18,7 +18,7 @@ const ServiceDetails = () => {
     const service = useLoaderData();
     let location = useLocation();
     const [newreviewdb, setnewReviewDb] = useState([])
-    useTitle('Service Details - Producer DCP')
+    useTitle("Food Details - Aspia's Kitchen")
     useEffect(() => {
         fetch(`http://localhost:5000/review/${service._id}`)
             .then(res => res.json())

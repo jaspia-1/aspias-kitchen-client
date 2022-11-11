@@ -10,34 +10,38 @@ const Home = () => {
     console.log(services.length)
     return (
         <div>
-            <div className='d-block d-md-flex container justify-content-around align-items-center'>
-                <div className='p-3 text-md-start'>
-                    <h1 className='fw-bold display-2 text-danger'>Aspia's Kitchen</h1>
-                    <h1 className='fw-bold text-uppercase popin'>Full in the stomach <br /> good for your health</h1>
-                    <p className=' text-secondary '>You can eat a variety of healthy food every day to feel good and maintain your health </p>
-                </div>
-                <div>
 
-                    <img src={headerpic} alt="" className='' style={{ maxWidth: "360px" }} />
-                </div>
-            </div>
 
-            {/* service  */}
-            <div className='my-5 yp-2 container'>
-                <h1 className='tomato popin fw-bold'>Items You Can Get Here</h1>
-
-                <Container className="" style={{ maxWidth: "900px" }}>
-                    <Row className='g-4 py-5' xs={1} md={2} lg={3}>
-                        {
-                            services.map(service => <ShowCards key={service._id} service={service}></ShowCards>)
-                        }
-                    </Row>
-                    <div className="w-100 text-center pb-5">
-                        <Link to='/services' className=''><button className='btn btn-info'>See More</button></Link>
+            <div style={{ maxWidth: "1200px" }} className="container">
+                <div className='d-block d-md-flex container justify-content-between align-items-center'>
+                    <div className='p-3 text-md-start'>
+                        <h1 className='fw-bold display-2 text-danger'>Aspia's Kitchen</h1>
+                        <h1 className='fw-bold text-uppercase popin'>Full in the stomach <br /> good for your health</h1>
+                        <p className=' text-secondary '>You can eat a variety of healthy food every day to feel good and maintain your health </p>
                     </div>
-                </Container>
-            </div>
+                    <div>
 
+                        <img src={headerpic} alt="" className='' style={{ maxWidth: "360px" }} />
+                    </div>
+                </div>
+
+                {/* service  */}
+                <div className='my-5 yp-2 container '>
+                    <h1 className='tomato popin fw-bold px-3'>Items You Can Get Here</h1>
+
+                    <Container className="" style={{ maxWidth: "900px" }}>
+                        <Row className='g-4 py-5' xs={1} md={2} lg={3}>
+                            {
+                                services.map(service => <ShowCards key={service._id} service={service}></ShowCards>)
+                            }
+                        </Row>
+                        <div className="w-100 text-center pb-5">
+                            <Link to='/services' className=''><button className='btn btn-info'>See More</button></Link>
+                        </div>
+                    </Container>
+                </div>
+
+            </div>
         </div>
     );
 };
