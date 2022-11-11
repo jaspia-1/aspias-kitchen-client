@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './Layout/Main';
 import Home from './Components/Home/Home';
 import Services from './Components/Services/Services';
@@ -59,6 +59,7 @@ function App() {
 
   return (
     <div className="App">
+      <RouterProvider router={router}></RouterProvider>
 
     </div>
   );
