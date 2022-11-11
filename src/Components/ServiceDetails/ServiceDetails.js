@@ -123,11 +123,11 @@ const ServiceDetails = () => {
                         {
                             (user && user.uid) ?
                                 <>
-                                    <form onSubmit={handleToReview}>
+                                    <form onSubmit={handleToReview} className="my-4">
 
 
                                         <textarea className='w-100 p-2 m-2' placeholder='Write your review in 200 characters' style={{ resize: "none" }} maxLength="200" name="review" id="" rows="4"></textarea>
-                                        <div className='d-flex justify-content-end'>
+                                        <div className='d-flex justify-content-end '>
 
                                             <button type='submit' className='btn btn-info '>Add Review</button>
                                         </div>
