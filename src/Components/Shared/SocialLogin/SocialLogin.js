@@ -22,7 +22,7 @@ const SocialLogin = () => {
                     email: user.email
                 }
                 console.log(currentuser)
-                fetch('http://localhost:5000/jwt', {
+                fetch('https://aspis-kitchen-server.vercel.app/jwt', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

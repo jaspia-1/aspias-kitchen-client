@@ -20,7 +20,7 @@ const ServiceDetails = () => {
     const [newreviewdb, setnewReviewDb] = useState([])
     useTitle("Food Details - Aspia's Kitchen")
     useEffect(() => {
-        fetch(`http://localhost:5000/review/${service._id}`)
+        fetch(`https://aspis-kitchen-server.vercel.app/review/${service._id}`)
             .then(res => res.json())
             .then(data => setnewReviewDb(data))
     }, [])
@@ -39,7 +39,7 @@ const ServiceDetails = () => {
         }
         form.reset();
 
-        fetch('http://localhost:5000/review', {
+        fetch('https://aspis-kitchen-server.vercel.app/review', {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',

@@ -19,7 +19,7 @@ const AddService = () => {
             name, img, details, price
         }
         console.log(service);
-        fetch('http://localhost:5000/addservice', {
+        fetch('https://aspis-kitchen-server.vercel.app/addservice', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
