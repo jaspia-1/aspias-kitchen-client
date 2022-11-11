@@ -30,7 +30,8 @@ function App() {
         },
         {
           path: '/services/:id',
-          element: <ServiceDetails></ServiceDetails>
+          element: <ServiceDetails></ServiceDetails>,
+          loader: async ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
 
         },
         {
