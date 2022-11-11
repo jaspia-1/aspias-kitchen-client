@@ -42,13 +42,13 @@ const MyReviewSingle = ({ rev, handleToDelete, handleToUpdate }) => {
             <Modal className='p-3' show={show} centered onHide={handleClose}>
                 <Form onSubmit={update}>
 
-                    <Modal.Body> <textarea className='w-100 p-2 m-2 bg-dark text-white' defaultValue={review} style={{ resize: "none" }} maxLength="250" name="editreview" id="" rows="4"></textarea> </Modal.Body>
+                    <Modal.Body> <textarea className='w-100 p-2 m-2 ' defaultValue={review} style={{ resize: "none" }} maxLength="200" name="editreview" id="" rows="4"></textarea> </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={handleClose}>
                             Close
                         </Button>
                         <Button variant="primary" type="submit">
-                            Save Changes
+                            Update
                         </Button>
                     </Modal.Footer>
                 </Form>

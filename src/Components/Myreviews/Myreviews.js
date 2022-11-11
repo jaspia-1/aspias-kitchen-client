@@ -54,8 +54,6 @@ const MyReviews = () => {
             .then(data => {
                 setnewReviewDb(data)
                 setThisLoading(false)
-
-
             })
     }, [user?.email, logOut])
 

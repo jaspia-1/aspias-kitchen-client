@@ -7,7 +7,7 @@ import { AuthContext } from '../../UserContext/UserContext';
 import { toast } from 'react-toastify';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 import useTitle from '../../hooks/useTitle/useTitle';
-
+import aspi from '../../assets/login.png'
 
 const Login = () => {
     const authInfo = useContext(AuthContext);
@@ -52,38 +52,47 @@ const Login = () => {
 
 
     return (
-        <div>
-            <Form onSubmit={handleToLogin} style={{ maxWidth: "440px" }} className="mx-auto my-5 gray-text border border-info p-4 rounded" >
-                <h2 className='my-3'>Login</h2>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" name='email' placeholder="Enter email" />
+        <div >
+            <div className='container' style={{ maxWidth: "900px" }}>
+                <div className='d-block d-md-flex justify-content-around align-items-center'>
 
-                </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" name='password' placeholder="Password" />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                    <Form onSubmit={handleToLogin} style={{ maxWidth: "440px" }} className="mx-auto my-5 gray-text border border-info p-4 rounded" >
+                        <h2 className='my-3'>Login</h2>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>Email address</Form.Label>
+                            <Form.Control type="email" name='email' placeholder="Enter email" />
 
-                </Form.Group>
-                <div className='text-center'>
+                        </Form.Group>
 
-                    <Button variant="outline-info" type="submit" >
-                        Login
-                    </Button>
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Label>Password</Form.Label>
+                            <Form.Control type="password" name='password' placeholder="Password" />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicCheckbox">
+
+                        </Form.Group>
+                        <div className='text-center'>
+
+                            <Button variant="outline-info" type="submit" >
+                                Login
+                            </Button>
+                        </div>
+                        {
+                            errormsg !== '' && <p>{errormsg}</p>
+                        }
+                        <p className='my-3 p-2'><small>New here? <Link className='text-decoration-none' to="/signup"> create an account</Link> </small></p>
+
+                        <SocialLogin></SocialLogin>
+                        <h2 className='p-2 fw-bold text-center text-danger'>Aspia's Kitchen
+                        </h2>
+                    </Form>
+                    <div>
+                        <img src={aspi} className='img-fluid' alt="" />
+                    </div>
                 </div>
-                {
-                    errormsg !== '' && <p>{errormsg}</p>
-                }
-                <p className='my-3 p-2'><small>New here? <Link className='text-decoration-none' to="/signup"> create an account</Link> </small></p>
-                {/* <Button onClick={handleTosignwithGoogle} variant="info" className="w-100 ">
-                    Sign Up with Google <FaGoogle className='my-auto ms-1' />
-                </Button> */}
-                <SocialLogin></SocialLogin>
 
-            </Form>
+            </div>
         </div>
     );
 };

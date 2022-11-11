@@ -7,11 +7,11 @@ import Home from './Components/Home/Home';
 import Services from './Components/Services/Services';
 import ServiceDetails from './Components/ServiceDetails/ServiceDetails';
 import Login from './Components/Login/Login';
-import SIgnUP from './Components/SignUp/SIgnUP';
 import Myreviews from './Components/Myreviews/Myreviews';
 import AddService from './Components/AddService/AddService';
 import BLog from './Components/Blog/BLog';
 import Private from './Private/Private';
+import SIgnUp from './Components/SignUp/SIgnUp';
 function App() {
   const router = createBrowserRouter([
     {
@@ -41,7 +41,7 @@ function App() {
         },
         {
           path: '/signup',
-          element: <SIgnUP></SIgnUP>
+          element: <SIgnUp></SIgnUp>
         },
 
         {
