@@ -23,7 +23,8 @@ const Home = () => {
             </div>
 
             {/* service  */}
-            <div className='services mt-4'>
+            <div className='my-5 yp-2 container'>
+                <h1 className='tomato popin fw-bold'>Items You Can Get Here</h1>
 
                 <Container className="" style={{ maxWidth: "900px" }}>
                     <Row className='g-4 py-5' xs={1} md={2} lg={3}>
