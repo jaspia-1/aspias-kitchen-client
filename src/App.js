@@ -11,6 +11,7 @@ import SIgnUP from './Components/SignUp/SIgnUP';
 import Myreviews from './Components/Myreviews/Myreviews';
 import AddService from './Components/AddService/AddService';
 import BLog from './Components/Blog/BLog';
+import Private from './Private/Private';
 function App() {
   const router = createBrowserRouter([
     {
@@ -45,7 +46,7 @@ function App() {
 
         {
           path: '/myreview',
-          element: <Myreviews></Myreviews>
+          element: <Private> <Myreviews></Myreviews></Private>
         },
         {
           path: '/addservice',
@@ -60,7 +61,7 @@ function App() {
   ])
 
   return (
-    <div className="App">
+    <div>
       <RouterProvider router={router}></RouterProvider>
 
     </div>
