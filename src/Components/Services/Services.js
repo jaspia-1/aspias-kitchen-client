@@ -1,22 +1,38 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import useTitle from '../../hooks/useTitle/useTitle';
+import { AuthContext } from '../../UserContext/UserContext';
 import ShowCards from '../Shared/ShowCards/ShowCards';
 
 const Services = () => {
     const [services, setSerVices] = useState([]);
+    const { loading, setLoading } = useContext(AuthContext);
+
 
     useTitle("Services - Aspia's Kitchen")
     useEffect(() => {
+        setLoading(true)
 
         fetch(`http://localhost:5000/services`)
             .then(res => res.json())
             .then(data => {
                 setSerVices(data)
+                setLoading(false)
+
 
             })
     }, [])
 
+    if (loading) {
+
+        return <div className='w-100 d-flex '>
+
+            <div className="spinner-border mx-auto my-5" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </div>
+        </div>
+
+    }
 
 
     return (

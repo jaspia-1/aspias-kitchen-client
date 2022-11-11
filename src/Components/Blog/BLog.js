@@ -1,7 +1,9 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
+import useTitle from '../../hooks/useTitle/useTitle';
 
 const BLog = () => {
+    useTitle("Blog -Aspia's Kitchen")
     return (
         <div className='container my-2 p-2' style={{ maxWidth: "900px" }}>
 
