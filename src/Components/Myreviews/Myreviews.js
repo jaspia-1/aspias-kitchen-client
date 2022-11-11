@@ -91,7 +91,7 @@ const MyReviews = () => {
                         <div>
                             {
 
-                                newreviewdb.length == 0 ? <div className=' position-absolute top-50  start-50 translate-middle'> <h1 className='text-center w-100 bebus-font display-1 '>No reviews were added</h1> </div> :
+                                newreviewdb.length == 0 ? <div className=' position-absolute top-50  start-50 translate-middle'> <h1 className='text-center w-100 bebas display-1 '>No reviews were added</h1> </div> :
                                     newreviewdb.map(rev => <MyReviewSingle key={rev._id} handleToDelete={handleToDelete} handleToUpdate={handleToUpdate} rev={rev}></MyReviewSingle>)
 
                             }

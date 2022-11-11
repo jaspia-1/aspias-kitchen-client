@@ -10,8 +10,8 @@ const ShowCards = ({ service }) => {
     const { img, _id, price, name, details } = service;
 
     return (
-        <Col>
-            <Card className='' bg="light" key="light">
+        <Col >
+            <Card className='shadow ' bg="light" key="light">
                 <PhotoProvider>
                     <PhotoView src={img}>
                         <Card.Img variant="top" src={img} style={{ height: "250px" }} />

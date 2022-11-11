@@ -119,7 +119,7 @@ const ServiceDetails = () => {
                 <Row className='container mx-auto' >
 
                     <Col xs={12} >
-                        <h2 className='bebus-font  fs-1 my-2 px-2 py-1'>Reviews</h2>
+                        <h2 className='bebas  fs-1 my-2 px-2 py-1'>Reviews</h2>
                         {
                             (user && user.uid) ?
                                 <>
