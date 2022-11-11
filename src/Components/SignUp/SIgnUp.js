@@ -96,9 +96,8 @@ const SignUp = () => {
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formurl">
                             <Form.Label>Select your Cartoon</Form.Label>
-                            {/* <Form.Control type="type" name="url" placeholder="url" required /> */}
-                            <div className=' p-2 text-center'>
 
+                            <div className=' p-2 text-center'>
                                 <img className={`p-1 ${picurl === 'https://i.ibb.co/Sm0zNsL/2022-11-11-14-33.png' ? "border  border-danger p-1" : ""}   `} style={{ height: "50px", width: "50px" }} onClick={() => setPicurl('https://i.ibb.co/Sm0zNsL/2022-11-11-14-33.png')} src="https://i.ibb.co/Sm0zNsL/2022-11-11-14-33.png" alt="" />
                                 <img className={`p-1 ${picurl === 'https://i.ibb.co/7p7VcZv/2022-11-11-14-33-1.png' ? "border border-danger  p-1" : ""} `} style={{ height: "50px", width: "50px" }} onClick={() => setPicurl('https://i.ibb.co/7p7VcZv/2022-11-11-14-33-1.png')} src="https://i.ibb.co/7p7VcZv/2022-11-11-14-33-1.png" alt="" />
                                 <img className={`p-1 ${picurl === 'https://i.ibb.co/1X0Rhbg/2022-11-11-14-34.png' ? 'border border-danger  p-1 ' : ''}`} style={{ height: "50px", width: "50px" }} onClick={() => setPicurl('https://i.ibb.co/1X0Rhbg/2022-11-11-14-34.png')} src="https://i.ibb.co/1X0Rhbg/2022-11-11-14-34.png" alt="" />
@@ -115,7 +114,6 @@ const SignUp = () => {
                             }
                         </Form.Group>
                         <div className='text-center'>
-
                             <Button variant="info" type="submit">
                                 Sign Up
                             </Button>

@@ -33,7 +33,7 @@ const Login = () => {
                     email: user.email
                 }
                 console.log(currentuser)
-                fetch('https://edm-producerd-dcp-server.vercel.app/jwt', {
+                fetch('http://localhost:5000/jwt', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
